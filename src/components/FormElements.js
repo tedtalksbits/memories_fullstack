@@ -8,10 +8,12 @@ export const FormContainer = styled.form`
    flex-direction: column;
    gap: 1rem;
    border-radius: 1rem;
+   width: 90%;
+   margin: auto;
 
 `
 export const UploadFile = styled.div`
-
+   padding: 1.5rem 0;
 `
 export const ButtonContainer = styled.div`
    display: flex;
