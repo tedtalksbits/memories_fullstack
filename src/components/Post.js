@@ -34,7 +34,7 @@ const Post = ({ setCurrentId }) => {
 
 
    const showText = () => {
-      this.classlist.toggle('show-text');
+      this.classList.toggle('show-text');
    }
 
    return (
