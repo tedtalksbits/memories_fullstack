@@ -34,7 +34,11 @@ const Post = ({ setCurrentId }) => {
 
 
    const showText = () => {
-      this.classList.toggle('show-text');
+      const text = document.querySelectorAll(".message");
+
+      text.addEventListener('click', () => {
+         this.classList.toggle('show-text');
+      })
    }
 
    return (
