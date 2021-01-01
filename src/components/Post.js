@@ -32,6 +32,11 @@ const Post = ({ setCurrentId }) => {
       setOpen(false);
    };
 
+
+   const showText = () => {
+      this.classlist.toggle('show-text');
+   }
+
    return (
       <>
          {posts.map((post) => (
@@ -46,7 +51,7 @@ const Post = ({ setCurrentId }) => {
                }
                <CardInfo>
                   <span className="title">{post.title}</span>
-                  <span className="message">{post.message}</span>
+                  <span className="message" onClick={showText()}>{post.message}</span>
                </CardInfo>
                <div className="tags">
                   {post.tags.map((tag) => `#${tag} `)}
