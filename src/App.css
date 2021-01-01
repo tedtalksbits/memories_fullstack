@@ -1,38 +1,55 @@
-.App {
-  text-align: center;
+.app{
+   display: flex;
+    grid-gap: 2rem;
+    gap: 2rem;
+    color: #dcdde1;
+    align-items: baseline;
+    height: 100%;
+    padding: 2rem;
+}
+.form-side{
+   flex-basis: 30%;
+   padding: 0 .5rem;
+   margin-bottom: 1.5rem;
+}
+.modal{
+   position: relative;
+   width: 500px;
+   height: 500px;
+   margin: auto;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@media screen and (max-width: 1200px){
+   .app{
+      flex-direction: column-reverse;
+   }
+   .form-side{
+      width: 100%;
+   }
+
+   
+}
+@media screen and (max-width: 378px){
+   .app{
+      padding: 1rem;
+   }
+   
+}
+@media screen and (max-width: 520px){
+   .modal{
+      width: 100%;
+   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.wrapper{
+display: grid;
+grid-template-columns: 1fr min(99ch, 100%) 1fr;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.wrapper > *{
+grid-column: 2;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.full-bleed {
+width:100%;
+grid-column: 1 / 4;
 }
