@@ -19,11 +19,7 @@
    margin: auto;
 
 }
-.show-text{
-   text-overflow: none;
-   white-space: none;
-   overflow: none;
-}
+
 @media screen and (max-width: 1200px){
    .app{
       flex-direction: column-reverse;

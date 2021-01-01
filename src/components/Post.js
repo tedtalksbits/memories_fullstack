@@ -33,13 +33,13 @@ const Post = ({ setCurrentId }) => {
    };
 
 
-   const showText = () => {
-      const text = document.querySelectorAll(".message");
+   // const showText = () => {
+   //    const text = document.querySelectorAll(".message");
 
-      text.addEventListener('click', () => {
-         this.classList.toggle('show-text');
-      })
-   }
+   //    text.addEventListener('click', () => {
+   //       this.classList.toggle('show-text');
+   //    })
+   // }
 
    return (
       <>
@@ -55,7 +55,7 @@ const Post = ({ setCurrentId }) => {
                }
                <CardInfo>
                   <span className="title">{post.title}</span>
-                  <span className="message" onClick={showText()}>{post.message}</span>
+                  <span className="message">{post.message}</span>
                </CardInfo>
                <div className="tags">
                   {post.tags.map((tag) => `#${tag} `)}

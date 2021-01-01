@@ -50,9 +50,7 @@ export const CardInfo = styled.div`
    }
    .message{
       color: #7c7f85;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      overflow: hidden;
+      line-height: 1.2;
    }
    
 `
