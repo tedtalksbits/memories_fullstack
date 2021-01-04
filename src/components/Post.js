@@ -20,7 +20,7 @@ const Post = ({ setCurrentId }) => {
 
    const dispatch = useDispatch();
    const posts = useSelector((state) => state.posts);
-   setIsLoading(false);
+
 
    const [open, setOpen] = React.useState(false);
 
@@ -32,14 +32,6 @@ const Post = ({ setCurrentId }) => {
       setOpen(false);
    };
 
-
-   // const showText = () => {
-   //    const text = document.querySelectorAll(".message");
-
-   //    text.addEventListener('click', () => {
-   //       this.classList.toggle('show-text');
-   //    })
-   // }
 
    return (
       <>
