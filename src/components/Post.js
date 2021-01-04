@@ -31,6 +31,7 @@ const Post = ({ setCurrentId }) => {
 
    const handleClose = () => {
       setOpen(false);
+
    };
 
 
