@@ -55,11 +55,11 @@ const Post = ({ setCurrentId }) => {
                <CardInfo>
                   <span className="title">{post.title}</span>
                   <span className="message">{post.message}</span>
-                  {post._id}
+                  {/* {post._id} */}
+                  <div className="tags">
+                     {post.tags.map((tag) => `#${tag} `)}
+                  </div>
                </CardInfo>
-               <div className="tags">
-                  {post.tags.map((tag) => `#${tag} `)}
-               </div>
                <CardActions>
                   <Button onClick={() => dispatch(likePost(post._id))}>
                      <FavoriteIcon />

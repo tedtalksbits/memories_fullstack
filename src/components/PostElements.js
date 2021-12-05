@@ -8,6 +8,7 @@ export const Card = styled.div`
    display: flex;
    flex-direction: column;
    gap: 1rem;
+   justify-content: space-between;
 
    .card-top{
       display: flex;
@@ -28,7 +29,6 @@ export const Card = styled.div`
    }
    .tags{
       font-size: .875rem;
-      padding: 0 1rem;
    }
   
 `

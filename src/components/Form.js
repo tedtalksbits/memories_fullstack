@@ -131,7 +131,18 @@ const Form = ({ currentId, setCurrentId }) => {
                   />
                   <label htmlFor="tags" className="input__label">Tags</label>
                </div>
-
+               <div className="input">
+                  <input
+                     className="input__input"
+                     name="selectedFile"
+                     type="text"
+                     placeholder=" "
+                     value={postData.selectedFile}
+                     onChange={(e) => setPostData({ ...postData, selectedFile: e.target.value })}
+                  />
+                  <label htmlFor="selectedFile" className="input__label">selectedFile</label>
+               </div>
+               or
                <UploadFile>
                   <FileBase
                      type="file"
