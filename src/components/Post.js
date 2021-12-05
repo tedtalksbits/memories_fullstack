@@ -32,6 +32,11 @@ const Post = ({ setCurrentId }) => {
       setOpen(false);
    };
 
+   if (!posts) {
+      return (
+         <h1>No data</h1>
+      )
+   }
 
    return (
       <>
