@@ -140,7 +140,7 @@ const Form = ({ currentId, setCurrentId }) => {
                      value={postData.selectedFile}
                      onChange={(e) => setPostData({ ...postData, selectedFile: e.target.value })}
                   />
-                  <label htmlFor="selectedFile" className="input__label">selectedFile</label>
+                  <label htmlFor="selectedFile" className="input__label">Image Url</label>
                </div>
                or
                <UploadFile>
