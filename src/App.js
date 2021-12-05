@@ -15,7 +15,7 @@ function App() {
 
   return (
     <div className="app">
-      <Posts setCurrentId={setCurrentId} />
+      <Posts setCurrentId={setCurrentId} currentId={currentId} />
       <Form currentId={currentId} setCurrentId={setCurrentId} />
     </div>
   );

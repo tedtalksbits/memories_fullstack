@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import moment from 'moment';
 import DeleteIcon from '@material-ui/icons/Delete';
@@ -18,6 +18,7 @@ import { Card, CardImage, CardInfo, CardActions, DeleteModal } from './PostEleme
 
 const Post = ({ setCurrentId }) => {
 
+   const [id, setId] = useState('');
    const dispatch = useDispatch();
    const posts = useSelector((state) => state.posts);
 
@@ -26,6 +27,7 @@ const Post = ({ setCurrentId }) => {
 
    const handleClickOpen = () => {
       setOpen(true);
+
    };
 
    const handleClose = () => {
@@ -41,7 +43,7 @@ const Post = ({ setCurrentId }) => {
    return (
       <>
          {posts.map((post) => (
-            <Card key={post._id}>
+            <Card key={post._id} >
                <div className="card-top">
                   <span className="creator">{post.creator}</span>
                   <span className="date">{moment(post.createdAt).fromNow()}</span>
@@ -53,6 +55,7 @@ const Post = ({ setCurrentId }) => {
                <CardInfo>
                   <span className="title">{post.title}</span>
                   <span className="message">{post.message}</span>
+                  {post._id}
                </CardInfo>
                <div className="tags">
                   {post.tags.map((tag) => `#${tag} `)}
@@ -63,7 +66,7 @@ const Post = ({ setCurrentId }) => {
                      <span className='likes'>{post.likeCount}</span>
                   </Button>
 
-                  <Button onClick={handleClickOpen} type="button">
+                  <Button onClick={() => { handleClickOpen(); setId(post._id) }} type="button">
                      <DeleteIcon />
                   </Button>
                   <Modal
@@ -81,7 +84,7 @@ const Post = ({ setCurrentId }) => {
                      <Fade in={open}>
                         <DeleteModal>
                            <h3 id="title">
-                              "Are you sure you want to delete this memory?"
+                              "Are you sure you want to delete this memory?"{id}
                            </h3>
                            <div className="del-actions">
                               <MyButton
@@ -94,7 +97,7 @@ const Post = ({ setCurrentId }) => {
                               <MyButton
                                  autoFocus
                                  onClick={() => {
-                                    dispatch(deletePost(post._id));
+                                    dispatch(deletePost(id));
                                     handleClose();
                                  }}
                                  className="small-button"

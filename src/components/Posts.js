@@ -10,10 +10,10 @@ const PostContainer = styled.div`
    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 `
 
-const Posts = ({ setCurrentId }) => {
+const Posts = ({ setCurrentId, currentId }) => {
    return (
       <PostContainer>
-         <Post setCurrentId={setCurrentId} />
+         <Post setCurrentId={setCurrentId} currentId={currentId} />
       </PostContainer>
    )
 }

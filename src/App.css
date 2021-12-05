@@ -6,6 +6,8 @@
     align-items: baseline;
     height: 100%;
     padding: 2rem;
+    max-width: 120ch;
+    margin: auto;
 }
 .form-side{
    flex-basis: 30%;
