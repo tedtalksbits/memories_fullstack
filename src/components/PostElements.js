@@ -33,8 +33,10 @@ export const Card = styled.div`
   
 `
 export const CardImage = styled.img`
-   object-fit: contain;
-   border-radius: 1rem;
+   object-fit: cover;
+   border-radius: 20px;
+   width: 100%;
+   height: 350px;
 
 `
 export const CardInfo = styled.div`
